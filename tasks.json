@@ -1,10 +1,53 @@
 {
-    "tasks": [
-      {"id": 1, "content": "Do aws test 1", "completed": false},
-      {"id": 2, "content": "Do aws test 2", "completed": false},
-      {"id": 3, "content": "Do aws test 3", "completed": false},
-      {"id": 4, "content": "Do aws test 4", "completed": false},
-      {"id": 5, "content": "Send passport photo and ticket photos to dad", "completed": false}
-    ]
-  }
-  
+  "today": [
+    {
+      "id": "today-1",
+      "content": "Do aws test 1",
+      "completed": false
+    },
+    {
+      "id": "today-2",
+      "content": "Do aws test 2",
+      "completed": false
+    },
+    {
+      "id": "today-3",
+      "content": "Do aws test 3",
+      "completed": false
+    },
+    {
+      "id": "today-4",
+      "content": "Do aws test 4",
+      "completed": false
+    },
+    {
+      "id": "today-5",
+      "content": "Send passport photo and ticket photos to dad",
+      "completed": false
+    }
+  ],
+  "February": [
+    {
+      "id": "Feb-1",
+      "content": "Buy valentines gift",
+      "completed": false
+    },
+    {
+      "id": "Feb-2",
+      "content": "Cancel whizlab",
+      "completed": false
+    },
+    {
+      "id": "Feb-3",
+      "content": "Sort out the gifts for Cyprus",
+      "completed": false
+    },
+    {
+      "id": "Feb-4",
+      "content": "Visa application proccess",
+      "completed": false
+    }
+  ],
+  "past": [
+  ]
+}
