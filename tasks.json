@@ -1,7 +1,10 @@
 {
     "tasks": [
-      {"id": 1, "content": "Do aws test at least 4 times today", "completed": false},
-      {"id": 2, "content": "Send passport photo and ticket photos to dad", "completed": false}
+      {"id": 1, "content": "Do aws test 1", "completed": false},
+      {"id": 2, "content": "Do aws test 2", "completed": false},
+      {"id": 3, "content": "Do aws test 3", "completed": false},
+      {"id": 4, "content": "Do aws test 4", "completed": false},
+      {"id": 5, "content": "Send passport photo and ticket photos to dad", "completed": false}
     ]
   }
   
