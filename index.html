@@ -93,6 +93,39 @@
             opacity: 1;
         }
     }
+
+    .carousel {
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .carousel-slides .slide {
+        display: none;
+    }
+
+    .carousel-slides .slide.active-slide {
+        display: block;
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #f1f1f100;
+        border: none;
+        padding: 10px 5px;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
 </style>
 
 <body>
@@ -101,13 +134,19 @@
             <div id="date"></div>
             <div id="time"></div>
         </div>
-        <div class="list-container">
-            <h2 class="list-title">Today</h2>
-            <ul id="task-list"></ul>
-        </div>
-        <div class="list-container" id="february-tasks-container">
-            <h2 class="list-title">February</h2>
-            <ul id="february-task-list"></ul>
+        <div class="carousel">
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+            <div class="carousel-slides">
+                <div class="list-container slide">
+                    <h2 class="list-title">Today</h2>
+                    <ul id="task-list"></ul>
+                </div>
+                <div class="list-container slide">
+                    <h2 class="list-title">February</h2>
+                    <ul id="february-task-list"></ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -182,6 +221,29 @@
                 listItem.style.pointerEvents = ''; // Re-enable click events after animation
             }, 300); // Match this duration with your CSS animation duration
         }
+        let currentSlideIndex = 0;
+        showSlide(currentSlideIndex);
+
+        function moveSlide(step) {
+            showSlide(currentSlideIndex += step);
+        }
+
+        function showSlide(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) currentSlideIndex = 0;
+            if (n < 0) currentSlideIndex = slides.length - 1;
+            // Hide all slides
+            for (let slide of slides) {
+                slide.style.display = "none";
+            }
+            // Show the current slide
+            slides[currentSlideIndex].style.display = "block";
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchTasks();
+            displayDateTime();
+            showSlide(currentSlideIndex); // Initialize the carousel to show the first slide
+        });
     </script>
 </body>
 
