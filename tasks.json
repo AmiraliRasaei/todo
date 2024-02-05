@@ -21,16 +21,17 @@
       "completed": false
     },
     {
-      "id": "today-65",
-      "content": "Finish performance review",
+      "id": "today-5",
+      "content": "Minimum state for DAC, facing an error trying to fix ",
       "completed": false
     }
+
   ],
   "February": [
     {
       "id": "Feb-1",
       "content": "Buy valentines gift",
-      "completed": false
+      "completed": true
     },
     {
       "id": "Feb-2",
@@ -45,6 +46,11 @@
     {
       "id": "Feb-4",
       "content": "Visa application proccess",
+      "completed": false
+    },
+    {
+      "id": "Feb-5",
+      "content": "Networking",
       "completed": false
     }
   ],
